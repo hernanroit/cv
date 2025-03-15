@@ -5,18 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hernán Roitbarg - CV</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Hernán Roitbarg</h1>
-        <p>Economista especializado en Desarrollo Económico y Cadenas Globales de Valor.</p>
+        <!-- Foto de perfil -->
+        <img src="foto.jpg" alt="Foto de Hernán Roitbarg" class="profile-pic">
+
+        <h1 id="name">Hernán Roitbarg</h1>
+        <p id="description">Economista especializado en Desarrollo Económico y Cadenas Globales de Valor.</p>
         
-        <div class="buttons">
-            <a href="cv.pdf" download="Hernan_Roitbarg_CV.pdf" class="btn">📄 Descargar CV</a>
-            <a href="mailto:hernanroit@gmail.com" class="btn">✉️ Contactar</a>
-            <a href="https://www.linkedin.com/in/hernan-roitbarg" target="_blank" class="btn">🔗 LinkedIn</a>
+        <!-- Botón de idioma -->
+        <button id="lang-btn">🌎 English</button>
+
+        <!-- Menú de pestañas -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('about')">📌 Sobre mí</button>
+            <button class="tab-btn" onclick="showTab('education')">🎓 Formación</button>
+            <button class="tab-btn" onclick="showTab('publications')">📖 Publicaciones</button>
+            <button class="tab-btn" onclick="showTab('work-examples')">💼 Ejemplos de trabajos</button>
+            <button class="tab-btn" onclick="showTab('contact')">📩 Contacto</button>
+        </div>
+
+        <!-- Contenido de pestañas -->
+        <div class="tab-content" id="about">
+            <p id="about-text">Tengo experiencia en análisis de datos económicos, modelos Insumo-Producto y consultoría.</p>
+        </div>
+        <div class="tab-content" id="education" style="display: none;">
+            <ul>
+                <li>📚 Doctorado en Desarrollo Económico - UNL</li>
+                <li>📊 Licenciatura en Economía - Universidad de Buenos Aires</li>
+                <li>📖 Especialización en Ciencia de Datos - En curso</li>
+            </ul>
+        </div>
+        <div class="tab-content" id="publications" style="display: none;">
+            <ul>
+                <li>📄 <a href="link-a-publicacion-1" target="_blank">Análisis de Productividad en América Latina</a></li>
+                <li>📑 <a href="link-a-publicacion-2" target="_blank">Impacto de la Globalización en el Empleo</a></li>
+                <li>📘 <a href="link-a-publicacion-3" target="_blank">Modelos Insumo-Producto Multirregionales</a></li>
+            </ul>
+        </div>
+        <div class="tab-content" id="work-examples" style="display: none;">
+            <ul>
+                <li>📊 <a href="link-a-trabajo-1" target="_blank">Informe sobre Cadenas Globales de Valor</a></li>
+                <li>📈 <a href="link-a-trabajo-2" target="_blank">Análisis del Mercado Laboral en Argentina</a></li>
+                <li>📌 <a href="link-a-trabajo-3" target="_blank">Desarrollo de Indicadores Económicos</a></li>
+            </ul>
+        </div>
+        <div class="tab-content" id="contact" style="display: none;">
+            <h3>Envíame un mensaje</h3>
+            <form id="contact-form">
+                <input type="text" id="name-input" placeholder="Tu nombre" required>
+                <input type="email" id="email-input" placeholder="Tu correo" required>
+                <textarea id="message-input" placeholder="Escribe tu mensaje..." required></textarea>
+                <button type="submit" class="btn">📩 Enviar mensaje</button>
+            </form>
+            <div class="buttons">
+                <a href="cv.pdf" download="Hernan_Roitbarg_CV.pdf" class="btn" id="download-cv">📄 Descargar CV</a>
+                <a href="https://www.linkedin.com/in/hernan-roitbarg" target="_blank" class="btn">🔗 LinkedIn</a>
+            </div>
         </div>
     </div>
 </body>
 </html>
-
