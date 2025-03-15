@@ -41,16 +41,17 @@
         </ul>
     </section>
     
-    <footer>
+ <footer>
+    <button id="contact-button">Enviar mensaje</button>
+    <a href="cv.pdf" download>Descargar CV</a>
 
-    <a href="cv.pdf" download data-key="descargar">Descargar CV</a>
-    
-    <!-- Formulario oculto para escribir el mensaje -->
-    <div id="contact-form" class="hidden">
-        <textarea id="message" placeholder="Escribe tu mensaje aquí..."></textarea>
-        <button id="send-email">Enviar</button>
-    </div>
-    </footer>
+    <!-- Formulario para escribir el mensaje -->
+    <form id="contact-form" class="hidden" action="https://formspree.io/f/tu-endpoint" method="POST">
+        <input type="email" name="email" id="user-email" placeholder="Tu correo" required>
+        <textarea name="message" id="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</footer>
     
     <script src="script.js"></script>
 </body>
