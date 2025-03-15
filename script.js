@@ -1,23 +1,45 @@
-function showTab(tab) {
-    document.querySelectorAll(".tab-content").forEach(content => {
-        content.style.display = "none";
-    });
-    document.getElementById(tab).style.display = "block";
+document.addEventListener("DOMContentLoaded", function () {
+    const translations = {
+        es: {
+            formacion: "Formación",
+            publicaciones: "Publicaciones",
+            trabajos: "Ejemplos de trabajos",
+            contacto: "Enviar mensaje",
+            descargar: "Descargar CV",
+            grado: "Licenciado en Economía - Universidad Nacional del Litoral (UNL)",
+            doctorado: "Doctor en Desarrollo Económico - Universidad Nacional de Quilmes (UNQUI)",
+            curso: "Curso en Ciencia de Datos",
+            pub1: "Artículo sobre cadenas globales",
+            pub2: "Informe sobre economía argentina",
+            pub3: "Libro sobre desarrollo económico",
+            trabajo1: "Análisis del mercado laboral",
+            trabajo2: "Estudio sobre productividad",
+            trabajo3: "Modelo insumo-producto"
+        },
+        en: {
+            formacion: "Education",
+            publicaciones: "Publications",
+            trabajos: "Work Examples",
+            contacto: "Send Message",
+            descargar: "Download CV",
+            grado: "Bachelor in Economics - National University of Litoral (UNL)",
+            doctorado: "PhD in Economic Development - National University of Quilmes (UNQUI)",
+            curso: "Data Science Course",
+            pub1: "Article on global value chains",
+            pub2: "Report on Argentine economy",
+            pub3: "Book on economic development",
+            trabajo1: "Labor market analysis",
+            trabajo2: "Productivity study",
+            trabajo3: "Input-output model"
+        }
+    };
 
-    document.querySelectorAll(".tab-btn").forEach(btn => {
-        btn.classList.remove("active");
-    });
-    document.querySelector(`[onclick="showTab('${tab}')"]`).classList.add("active");
-}
+    let currentLanguage = "es";
 
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+    document.getElementById("language-toggle").addEventListener("click", function () {
+        currentLanguage = currentLanguage === "es" ? "en" : "es";
+        this.textContent = currentLanguage === "es" ? "English" : "Español";
 
-    let name = document.getElementById("name-input").value;
-    let email = document.getElementById("email-input").value;
-    let message = document.getElementById("message-input").value;
-
-    let mailtoLink = `mailto:hernanroit@gmail.com?subject=Contacto de ${name}&body=Email: ${email}%0D%0A%0D%0AMensaje:%0D%0A${message}`;
-    
-    window.location.href = mailtoLink;
-});
+        document.querySelectorAll("[data-key]").forEach(element => {
+            const key = element.getAttribute("data-key");
+            element.textContent = translations[currentLanguage][key]
