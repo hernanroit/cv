@@ -13,19 +13,11 @@
         <button id="language-toggle">English</button>
     </header>
     
-    <nav>
-        <ul>
-            <li><a href="#formacion" class="nav-link" data-key="formacion">Formación</a></li>
-            <li><a href="#publicaciones" class="nav-link" data-key="publicaciones">Publicaciones</a></li>
-            <li><a href="#trabajos" class="nav-link" data-key="trabajos">Ejemplos de trabajos</a></li>
-        </ul>
-    </nav>
-
     <section id="formacion">
         <h2 data-key="formacion">Formación</h2>
         <ul>
-            <li data-key="grado">Licenciado en Economía - Universidad Nacional del Litoral (UNL)</li>
             <li data-key="doctorado">Doctor en Desarrollo Económico - Universidad Nacional de Quilmes (UNQUI)</li>
+            <li data-key="grado">Licenciado en Economía - Universidad Nacional del Litoral (UNL)</li>
             <li data-key="curso">Conocimientos en Ciencia de Datos (R y Python)</li>
         </ul>
     </section>
@@ -49,8 +41,14 @@
     </section>
     
     <footer>
-        <button id="contact-button" data-key="contacto">Enviar mensaje</button>
-        <a href="cv.pdf" download data-key="descargar">Descargar CV</a>
+    <button id="contact-button" data-key="contacto">Enviar mensaje</button>
+    <a href="cv.pdf" download data-key="descargar">Descargar CV</a>
+    
+    <!-- Formulario oculto para escribir el mensaje -->
+    <div id="contact-form" class="hidden">
+        <textarea id="message" placeholder="Escribe tu mensaje aquí..."></textarea>
+        <button id="send-email">Enviar</button>
+    </div>
     </footer>
     
     <script src="script.js"></script>
