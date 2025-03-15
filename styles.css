@@ -83,3 +83,17 @@ ul li {
 .btn:hover {
     background: #005582;
 }
+.hidden {
+    display: none;
+}
+
+#contact-form {
+    margin-top: 10px;
+}
+
+#contact-form textarea {
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
