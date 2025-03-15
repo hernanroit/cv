@@ -46,11 +46,21 @@
     <a href="cv.pdf" download>Descargar CV</a>
 
     <!-- Formulario para escribir el mensaje -->
-    <form id="contact-form" class="hidden" action="https://formspree.io/f/xeoaoagb" method="POST">
-        <input type="email" name="email" id="user-email" placeholder="Tu correo" required>
-        <textarea name="message" id="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
-        <button type="submit">Enviar</button>
-    </form>
+<form
+  action="https://formspree.io/f/xeoaoagb"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
 </footer>
     
     <script src="script.js"></script>
