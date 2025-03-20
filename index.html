@@ -9,59 +9,69 @@
 <body>
     <header>
         <img src="foto.png" alt="Foto de Hernán Roitbarg" class="profile-pic">
-        <h1 id="name">Hernán Roitbarg</h1>
-
+        <h1 id="name">Hernán A. Roitbarg</h1>
+        <h2>Consultor en Asuntos Económicos</h2>
+        <p>Doctor en Desarrollo Económico (UNQUI) | Licenciado en Economía (UNL)</p>
     </header>
     
+    <section id="perfil">
+        <h2>Perfil Profesional</h2>
+        <p>Consultor en macroeconomía, análisis sectorial y modelización económica. Especializado en modelos insumo-producto, desarrollo regional y evaluación de impacto económico. Experiencia en consultorías para PXQ, Analytica y CIPAX.</p>
+    </section>
+    
     <section id="formacion">
-        <h2 data-key="formacion">Formación</h2>
+        <h2>Formación Académica</h2>
         <ul>
-            <li data-key="doctorado">Doctor en Desarrollo Económico - Universidad Nacional de Quilmes (UNQUI)</li>
-            <li data-key="grado">Licenciado en Economía - Universidad Nacional del Litoral (UNL)</li>
-            <li data-key="curso">Conocimientos en Ciencia de Datos (R y Python)</li>
-        </ul>
-    </section>
-
-    <section id="publicaciones">
-        <h2 data-key="publicaciones">Publicaciones</h2>
-        <ul>
-            <li><a href="https://www.sciencedirect.com/science/article/pii/S0954349X23000966" data-key="pub1">Artículo sobre cadenas globales</a></li>
-            <li><a href="https://revistas.uniandes.edu.co/index.php/dys/article/view/6775" data-key="pub2">Artículo sobre precios agrícolas</a></li>
-            <li><a href="https://publicatt.unicatt.it/bitstream/10807/273544/1/Brondino%2BEt%2Bal.pdf" data-key="pub3">Artículo sobre Economía Regional</a></li>
-        </ul>
-    </section>
-
-    <section id="trabajos">
-        <h2 data-key="trabajos">Ejemplos de trabajos</h2>
-        <ul>
-            <li><a href="#" data-key="trabajo1">Capacitaciones en Ciencia de Datos, Economía y Cuentas Nacionales</a></li>
-            <li><a href="#" data-key="trabajo1">Análisis del mercado laboral</a></li>
-            <li><a href="#" data-key="trabajo2">Estudios sobre comercio internacional</a></li>
-            <li><a href="#" data-key="trabajo3">Modelos insumo-producto a escala global, nacional y subnacional</a></li>
+            <li>Doctor en Desarrollo Económico - Universidad Nacional de Quilmes (UNQUI)</li>
+            <li>Licenciado en Economía - Universidad Nacional del Litoral (UNL)</li>
         </ul>
     </section>
     
- <footer>
-    <button id="contact-button">Enviar mensaje</button>
-    <a href="cv.pdf" download>Descargar CV</a>
-
-    <!-- Formulario para escribir el mensaje -->
-<form
-  action="https://formspree.io/f/xeoaoagb"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
-</footer>
+    <section id="experiencia">
+        <h2>Experiencia Profesional</h2>
+        <ul>
+            <li>Consultor Independiente en economía y análisis de impacto (2021 - Presente)</li>
+            <li>Docente de Grado y Posgrado en UNL, UCSF, UCES, UNPAZ (2020 - Presente)</li>
+            <li>Investigador en CONICET (2015 - 2024)</li>
+        </ul>
+    </section>
+    
+    <section id="proyectos">
+        <h2>Proyectos y Consultorías</h2>
+        <ul>
+            <li>Análisis de Cadenas Globales de Valor en Sudamérica (CEPAL, 2018)</li>
+            <li>Modelización de economías subnacionales (Santa Fe, Catamarca, Entre Ríos)</li>
+            <li>Impacto de la comunidad latina en Allegheny County, USA (2025 - Presente)</li>
+            <li>Análisis del sector energético en Tierra del Fuego</li>
+        </ul>
+    </section>
+    
+    <section id="habilidades">
+        <h2>Habilidades Técnicas</h2>
+        <ul>
+            <li>Análisis de datos: Python, R, Office</li>
+            <li>Visualización: ggplot2, Power BI, Tableau</li>
+            <li>Modelización económica: Modelos de equilibrio general, Insumo-Producto</li>
+            <li>Idiomas: Español (nativo), Inglés (avanzado)</li>
+        </ul>
+    </section>
+    
+    <footer>
+        <h2>Contacto</h2>
+        <p>Email: <a href="mailto:hernanroit@gmail.com">hernanroit@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/hernan-roitbarg">linkedin.com/in/hernan-roitbarg</a></p>
+        <p>GitHub: <a href="https://github.com/hernanroit">github.com/hernanroit</a></p>
+        
+        <form action="https://formspree.io/f/xeoaoagb" method="POST">
+            <label>Email:
+                <input type="email" name="email" required>
+            </label>
+            <label>Mensaje:
+                <textarea name="message" required></textarea>
+            </label>
+            <button type="submit">Enviar</button>
+        </form>
+    </footer>
     
     <script src="script.js"></script>
 </body>
